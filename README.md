@@ -7,6 +7,10 @@ Assets like images that can be used in the app.
 
 Elements or UI components that can be used in pages to build meaningful content.
 
+**Helper Directory -**
+
+Contains constants and util functions used throughout the code.
+
 **Components Directory -**
 
 Elements or UI components that can be used in pages to build meaningful content.
@@ -15,9 +19,9 @@ Elements or UI components that can be used in pages to build meaningful content.
 
 Install the dependencies using : `npm install`(or yarn)
 
-Create an .env file with  
-`REACT_APP_APPBASE_URL = YOUR_APPBASE_URL`  
-`REACT_APP_APPBASE_APP_NAME = APPBASE_INDEX_NAME`  
+Create an .env file with
+`REACT_APP_APPBASE_URL = YOUR_APPBASE_URL`
+`REACT_APP_APPBASE_APP_NAME = APPBASE_INDEX_NAME`
 `REACT_APP_APPBASE_APP_CREDENTIALS = APPBASE_CREDENTIALS`
 
 ## Available Scripts
