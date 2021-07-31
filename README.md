@@ -12,6 +12,14 @@ The project aims to showcase the utility potential of the SearchBox libraries (R
 > #### The project is demonstrated using two different frontend libs/ frameworks, namely, `React` & `Vue`.
 ##  :punch: Recipe Search : `React`
 
+### CodeSandbox :
+
+<iframe src="https://codesandbox.io/embed/quizzical-wood-4rh1v?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="recipe-search-react"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 ### App Preview :
 ![image](https://user-images.githubusercontent.com/57627350/127728792-8dba8707-90e7-4ea4-90c9-4a60ebaaf6b5.png)
 
