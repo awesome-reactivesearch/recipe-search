@@ -13,6 +13,7 @@ The project aims to showcase the utility potential of the SearchBox libraries (R
 ##  :punch: Recipe Search : `React`
 
 ### App Preview :
+![image](https://user-images.githubusercontent.com/57627350/127728792-8dba8707-90e7-4ea4-90c9-4a60ebaaf6b5.png)
 
 
 ### Structure:
