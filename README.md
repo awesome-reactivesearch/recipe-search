@@ -12,8 +12,11 @@ The project aims to showcase the utility potential of the SearchBox libraries (R
 > #### The project is demonstrated using two different frontend libs/ frameworks, namely, `React` & `Vue`.
 ##  :punch: Recipe Search : `Vue`
 
-### App Preview :
-![image](https://user-images.githubusercontent.com/57627350/127728948-3f97098e-ea7c-4716-87f5-9157376776bf.png)
+- [CodeSandbox Link](https://codesandbox.io/s/recipe-search-react-4rh1v)
+ 
+### App Preview: 
+[![image](https://user-images.githubusercontent.com/57627350/127728948-3f97098e-ea7c-4716-87f5-9157376776bf.png)](https://codesandbox.io/s/recipe-search-vue-hfe03)
+
 
 ### Structure:
 
