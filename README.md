@@ -10,46 +10,45 @@ The project aims to showcase the utility potential of the SearchBox libraries (R
 - You can do advanced search relevance features - that help with engagement and conversions (through the use of : popular suggestions, recent suggestions, synonyms, query rules et al) that can't be done otherwise with something like Typesense or Elasticsearch itself.
 
 > #### The project is demonstrated using two different frontend libs/ frameworks, namely, `React` & `Vue`.
-##  :punch: Recipe Search : `React`
+##  :punch: Recipe Search : `Vue`
 
 ### App Preview :
 ![image](https://user-images.githubusercontent.com/57627350/127728792-8dba8707-90e7-4ea4-90c9-4a60ebaaf6b5.png)
 
-
 ### Structure:
 
-- **Assets Directory -**
+**Assets Directory -**
 Assets like images that can be used in the app.
 
-- **Helper Directory -**
+Elements or UI components that can be used in pages to build meaningful content.
 
-    Contains constants and util functions used throughout the code.
+**Components Directory -**
 
-- **Components Directory -**
-
-    Elements or UI components that can be used in pages to build meaningful content.
+Elements or UI components that can be used in pages to build meaningful content.
 
 ### Steps to get started:
 
 Install the dependencies using : `npm install`(or yarn)
 
-> Create an .env file with
-`REACT_APP_APPBASE_URL = YOUR_APPBASE_URL`
-`REACT_APP_APPBASE_APP_NAME = APPBASE_INDEX_NAME`
-`REACT_APP_APPBASE_APP_CREDENTIALS = APPBASE_CREDENTIALS`
+Create an .env file with  
+`VUE_APP_APPBASE_URL = YOUR_APPBASE_URL`  
+`VUE_APP_APPBASE_APP_NAME = APPBASE_INDEX_NAME`  
+`VUE_APP_APPBASE_APP_CREDENTIALS = APPBASE_CREDENTIALS`
 
-### Available Scripts
+#### Compiles and hot-reloads for development
 
-In the project directory, you can run:
+```
+npm run serve
+```
 
-#### `npm start`
+#### Compiles and minifies for production
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm run build
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Lints and fixes files
 
-#### `npm build`
-
-Creates fresh build
+```
+npm run lint
+```
