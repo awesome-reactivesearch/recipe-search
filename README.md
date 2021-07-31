@@ -13,7 +13,7 @@ The project aims to showcase the utility potential of the SearchBox libraries (R
 ##  :punch: Recipe Search : `Vue`
 
 ### App Preview :
-![image](https://user-images.githubusercontent.com/57627350/127728792-8dba8707-90e7-4ea4-90c9-4a60ebaaf6b5.png)
+![image](https://user-images.githubusercontent.com/57627350/127728948-3f97098e-ea7c-4716-87f5-9157376776bf.png)
 
 ### Structure:
 
