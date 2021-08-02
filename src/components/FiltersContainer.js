@@ -1,4 +1,4 @@
-import { SearchBox, SearchComponent } from "@appbaseio/react-searchbox";
+import { SearchComponent } from "@appbaseio/react-searchbox";
 import { Button, Col } from "antd";
 import React, { useEffect, useState } from "react";
 import FiltersRenderer from "./FiltersRenderer";
@@ -38,49 +38,10 @@ const FiltersContainer = () => {
         isMobileView && showFilterOptions ? "show-ingredients-full-screen" : ""
       }`}
     >
-      {isMobileView && !showFilterOptions && (
+      {isMobileView && (
         <Button onClick={() => setShowFilterOptions(!showFilterOptions)}>
           {showFilterOptions ? "Hide" : "Show"} Filters
         </Button>
-      )}
-
-      {/* Searchbox for searching through ingredients */}
-      {((isMobileView && showFilterOptions) || !isMobileView) && (
-        <SearchBox
-          queryFormat="and"
-          className={`${
-            !showFilterOptions && isMobileView
-              ? "isIngredientHidden ingredient-search-box"
-              : "ingredient-search-box"
-          }`}
-          id="filter-search-component"
-          dataField={[
-            {
-              field: "NER.keyword",
-              weight: 4,
-            },
-          ]}
-          title={
-            <div className="filter-search-component__title">
-              <span>Ingredient Filter</span>
-              {isMobileView && (
-                <Button
-                  onClick={() => setShowFilterOptions(!showFilterOptions)}
-                >
-                  {showFilterOptions ? "Hide" : "Show"} Filters
-                </Button>
-              )}
-            </div>
-          }
-          placeholder="Try searching : 'salt' or 'sugar'"
-          autosuggest={true}
-          debounce={100}
-          fuzziness="AUTO"
-          showClear
-          URLParams
-          iconPosition="left"
-          enablePredictiveSuggestions={true}
-        />
       )}
 
       {/* Search component displaying ingredient filters facets */}
@@ -93,7 +54,7 @@ const FiltersContainer = () => {
         dataField="NER.keyword"
         subscribeTo={["aggregationData", "requestStatus", "value"]}
         react={{
-          and: ["search-component", "filter-search-component"],
+          and: ["search-component"],
         }}
         value={[]}
         render={({ aggregationData, loading, value, setValue }) => {
