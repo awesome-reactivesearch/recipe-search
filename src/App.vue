@@ -86,29 +86,6 @@
               >
                 {{ showFilterOptions ? "Hide" : "Show" }} Filters
               </a-button>
-              <search-box
-                id="filter-search-component"
-                :dataField="[
-                  {
-                    field: 'NER.keyword',
-                    weight: 4,
-                  },
-                ]"
-                placeholder="Try searching : 'salt' or 'sugar'"
-                :autosuggest="false"
-                :enablePopularSuggestions="false"
-                :enableRecentSearches="false"
-                :debounce="100"
-                queryFormat="and"
-                fuzziness="AUTO"
-                :showClear="true"
-                :URLParams="true"
-                iconPosition="left"
-                :enablePredictiveSuggestions="true"
-                :className="
-                  !showFilterOptions && isMobileView ? 'isIngredientHidden' : ''
-                "
-              />
 
               <search-component
                 id="ingredient-filter"
@@ -119,7 +96,7 @@
                 :aggregationSize="30"
                 :subscribe-to="['aggregationData', 'requestStatus', 'value']"
                 :react="{
-                  and: ['search-component', 'filter-search-component'],
+                  and: ['search-component'],
                 }"
               >
                 <div
@@ -186,63 +163,63 @@
 <script>
 // import Paginate from "vuejs-paginate";
 import {
-	SearchBase,
-	SearchComponent,
-	SearchBox,
-} from '@appbaseio/vue-searchbox';
-import './styles.css';
-import './App.css';
-import RecipeModal from './components/RecipeModal.vue';
-import QuerySuggestions from './components/QuerySuggestions.vue';
-import FiltersRenderer from './components/FiltersRenderer.vue';
-import ResultsRenderer from './components/ResultsRenderer.vue';
+  SearchBase,
+  SearchComponent,
+  SearchBox,
+} from "@appbaseio/vue-searchbox";
+import "./styles.css";
+import "./App.css";
+import RecipeModal from "./components/RecipeModal.vue";
+import QuerySuggestions from "./components/QuerySuggestions.vue";
+import FiltersRenderer from "./components/FiltersRenderer.vue";
+import ResultsRenderer from "./components/ResultsRenderer.vue";
 
 export default {
-	name: 'App',
-	components: {
-		SearchBase,
-		SearchBox,
-		SearchComponent,
-		RecipeModal,
-		QuerySuggestions,
-		FiltersRenderer,
-		ResultsRenderer,
-	},
-	data() {
-		return {
-			index: process.env.VUE_APP_APPBASE_APP_NAME,
-			credentials: process.env.VUE_APP_APPBASE_APP_CREDENTIALS,
-			url: process.env.VUE_APP_APPBASE_URL,
-			isMobileView: false,
-			showFilterOptions: false,
-			recipeItemUnderObservation: {}, // recipe item shown in modal
-			isRecipeModalVisible: false,
-		};
-	},
-	created() {
-		if (window?.innerWidth <= 600) {
-			!this.isMobileView && (this.isMobileView = true);
-		}
+  name: "App",
+  components: {
+    SearchBase,
+    SearchBox,
+    SearchComponent,
+    RecipeModal,
+    QuerySuggestions,
+    FiltersRenderer,
+    ResultsRenderer,
+  },
+  data() {
+    return {
+      index: process.env.VUE_APP_APPBASE_APP_NAME,
+      credentials: process.env.VUE_APP_APPBASE_APP_CREDENTIALS,
+      url: process.env.VUE_APP_APPBASE_URL,
+      isMobileView: false,
+      showFilterOptions: false,
+      recipeItemUnderObservation: {}, // recipe item shown in modal
+      isRecipeModalVisible: false,
+    };
+  },
+  created() {
+    if (window?.innerWidth <= 600) {
+      !this.isMobileView && (this.isMobileView = true);
+    }
 
-		window.addEventListener('resize', this.windowResizeHandler);
-	},
-	destroyed() {
-		window.removeEventListener('resize', this.windowResizeHandler);
-	},
-	methods: {
-		windowResizeHandler() {
-			if (window?.innerWidth <= 600) {
-				!this.isMobileView && (this.isMobileView = true);
-			} else {
-				this.isMobileView && (this.isMobileView = false);
-			}
-		},
-		setFullRecipe(recipeItem) {
-			this.recipeItemUnderObservation = recipeItem;
-			this.isRecipeModalVisible
-        = !!recipeItem || Object.entries(recipeItem).length > 0;
-		},
-	},
+    window.addEventListener("resize", this.windowResizeHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.windowResizeHandler);
+  },
+  methods: {
+    windowResizeHandler() {
+      if (window?.innerWidth <= 600) {
+        !this.isMobileView && (this.isMobileView = true);
+      } else {
+        this.isMobileView && (this.isMobileView = false);
+      }
+    },
+    setFullRecipe(recipeItem) {
+      this.recipeItemUnderObservation = recipeItem;
+      this.isRecipeModalVisible =
+        !!recipeItem || Object.entries(recipeItem).length > 0;
+    },
+  },
 };
 </script>
 
