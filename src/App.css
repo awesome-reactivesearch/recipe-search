@@ -95,3 +95,7 @@
 .search-icon {
   fill: black !important;
 }
+
+#searchbox-downshift div div ul {
+  max-height: unset;
+}
