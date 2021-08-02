@@ -136,3 +136,7 @@ code {
 .search-icon {
   fill: black !important;
 }
+
+.result-search-box div ul {
+  max-height: unset;
+}
