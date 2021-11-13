@@ -1,7 +1,7 @@
 import React from "react";
 import { SearchContext } from "@appbaseio/react-searchbox";
 import { Spin } from "antd";
-import "./../assets/styles/infiniteScrollContainer.css";
+import "../assets/styles/infiniteScrollContainer.css";
 
 let prevY = 0;
 class InfiniteScrollContainer extends React.Component {

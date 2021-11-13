@@ -1,0 +1,27 @@
+.recipe-modal {
+  top: 20px;
+  text-align: left;
+}
+
+.recipe-modal__title {
+  height: auto;
+  white-space: pre-wrap;
+  margin-bottom: 0px;
+  line-height: 22px;
+  font-size: 14px;
+  color: rgb(255, 127, 127);
+}
+
+.ant-modal-body div ul {
+  padding: 0px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.ant-modal-body div ul li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 4px 1px;
+}

@@ -1,7 +1,7 @@
-import "./../assets/styles/recipeFullView.css";
+import "../assets/styles/recipeFullView.css";
 
-import CookingIcon from "./../assets/images/cooking.svg";
-import IngredientIcon from "./../assets/images/ingredients.svg";
+import CookingIcon from "../assets/images/cooking.svg";
+import IngredientIcon from "../assets/images/ingredients.svg";
 import Modal from "antd/lib/modal/Modal";
 import React from "react";
 
@@ -27,7 +27,7 @@ const RecipeFullView = ({
         footer={
           <span>
             <img
-              src={require("./../assets/images/external-link.png").default}
+              src={require("../assets/images/external-link.png").default}
               height="35px"
             />
             <a

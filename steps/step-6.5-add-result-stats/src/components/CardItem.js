@@ -2,8 +2,8 @@ import React from "react";
 import { Button, Card, Col, Divider, Row, Tooltip } from "antd";
 import Meta from "antd/lib/card/Meta";
 
-import "./../assets/styles/cardItem.css";
-import OvenGloveIcon from "./../assets/images/oven-glove.svg";
+import "../assets/styles/cardItem.css";
+import OvenGloveIcon from "../assets/images/oven-glove.svg";
 const ExternalLinkImg = "https://i.imgur.com/rYmFZVm.png";
 
 const CardItem = ({ item, setfullRecipe }) => (
