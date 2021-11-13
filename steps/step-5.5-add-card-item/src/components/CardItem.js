@@ -4,7 +4,7 @@ import Meta from "antd/lib/card/Meta";
 
 import "./../assets/styles/cardItem.css";
 import OvenGloveIcon from "./../assets/images/oven-glove.svg";
-import ExternalLinkImg from "./../assets/images/external-link.png";
+const ExternalLinkImg = "https://i.imgur.com/rYmFZVm.png";
 
 const CardItem = ({ item, setfullRecipe }) => (
   <Col flex="0 0 auto">
