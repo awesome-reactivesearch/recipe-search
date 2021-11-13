@@ -1,52 +1,38 @@
-import React from "react";
-import { Card, Col, Row, Tag, Tooltip } from "antd";
-import { getHostname } from "../helper/functions";
-import "./../assets/styles/promotedCardItem.css";
+import React, { Component } from "react";
+import { Row, Tag } from "antd";
 
-const PromotedCardItem = ({ item }) => {
-  return (
-    <Col span={24}>
-      {" "}
-      <Card className="promoted-card" title={null}>
-        {" "}
-        <Row
-          justify="space-between"
-          align="middle"
-          className="promoted-card__first-row"
-          wrap={false}
-        >
-          <h3>
-            <img
-              alt="speaker-icon"
-              src="https://img.icons8.com/emoji/48/000000/speaker-medium-volume.png"
-            />
-            <span>{item.title.trim().replace(/[()]/g, "")}</span>
-          </h3>
-          <Tag color="red" className="promoted-tag">
-            Promoted
-          </Tag>
-        </Row>
-        <Row
-          justify="space-between"
-          align="bottom"
-          className="promoted-card__second-row"
-          wrap={false}
-        >
-          {" "}
-          <span>
-            Sponsored by :{" "}
-            <Tooltip title="See Full Recipe!">
-              {" "}
-              <a rel="noopener noreferrer" href={item.link} target="_blank">
-                {getHostname(item.link)}
-              </a>{" "}
-            </Tooltip>
-          </span>
-          <i> Powered by Query Rules</i>
-        </Row>
-      </Card>
-    </Col>
-  );
-};
+import { STATIC_RECIPE_SUGGESTIONS } from "../helper/constans";
+import { SearchContext } from "@appbaseio/react-searchbox";
 
-export default PromotedCardItem;
+class QuerySuggestions extends Component {
+  static contextType = SearchContext;
+
+  getStaticRecipeJsx = (optionsArr) => {
+    return optionsArr.map((option) => (
+      <React.Fragment key={option.value}>
+        <Tag
+          className="suggestion-tag"
+          onClick={() => {
+            this.context._components["search-component"].setValue(
+              option.value,
+              { triggerCustomQuery: true }
+            );
+          }}
+          color={option.tagColor}
+        >
+          {option.value}
+        </Tag>
+        &nbsp;
+      </React.Fragment>
+    ));
+  };
+  render() {
+    return (
+      <Row className="suggestions-row">
+        Try: &nbsp;{this.getStaticRecipeJsx(STATIC_RECIPE_SUGGESTIONS)}
+      </Row>
+    );
+  }
+}
+
+export default QuerySuggestions;
