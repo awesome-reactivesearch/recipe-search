@@ -1,0 +1,138 @@
+body {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.layout {
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.layout > div > h2 > span {
+  font-size: 1rem;
+}
+
+.result-row {
+  padding-top: 70px;
+}
+
+.result-row .ant-col:first-child.show-ingredients-full-screen {
+  position: fixed;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+
+.result-time-status {
+  z-index: 1;
+  font-size: 1rem;
+  font-style: italic;
+}
+.result-time-status p {
+  margin-bottom: 0;
+}
+.result-time-status p strong {
+  color: red;
+}
+.result-row {
+  padding-top: 70px;
+}
+
+.result-search-box,
+.ingredient-search-box {
+  padding-bottom: 10px;
+}
+
+.suggestions-row {
+  row-gap: 10px !important;
+}
+.suggestion-tag {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .layout {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .result-row {
+    padding-top: 17px;
+  }
+  .result-time-status {
+    padding-top: 25px;
+  }
+  .result-row {
+    padding-top: 25px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .result-time-status {
+    padding-top: 25px;
+  }
+}
+
+.filter-search-component__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-icon {
+  fill: black !important;
+}
