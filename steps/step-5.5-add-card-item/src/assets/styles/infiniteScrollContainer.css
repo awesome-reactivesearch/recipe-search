@@ -1,0 +1,10 @@
+#under-observation {
+  max-height: 70vh;
+  overflow: hidden scroll;
+}
+
+.loading-spinner {
+  height: 100px;
+  margin: 30px;
+  padding: 50;
+}
