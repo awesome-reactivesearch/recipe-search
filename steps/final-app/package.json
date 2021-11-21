@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@appbaseio/react-searchbox": "^1.6.4-alpha",
+    "@appbaseio/react-searchbox": "1.6.9-beta",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.8.3",

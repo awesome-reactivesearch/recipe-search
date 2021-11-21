@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@appbaseio/react-searchbox": "1.6.4-alpha",
+    "@appbaseio/react-searchbox": "1.6.9-beta"
     "antd": "4.16.13",
     "react": "17.0.2",
     "react-dom": "17.0.2",
