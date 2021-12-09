@@ -132,7 +132,3 @@ code {
   display: flex;
   justify-content: space-between;
 }
-
-.search-icon {
-  fill: black !important;
-}
