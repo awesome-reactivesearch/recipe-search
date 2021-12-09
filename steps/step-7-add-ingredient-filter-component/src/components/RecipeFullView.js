@@ -26,10 +26,7 @@ const RecipeFullView = ({
         onCancel={onClose}
         footer={
           <span>
-            <img
-              src={require("../assets/images/external-link.png").default}
-              height="35px"
-            />
+            <img src={"https://i.imgur.com/pX4jJnA.png"} height="35px" />
             <a
               href={"https://" + recipeItem.link}
               target="_blank"

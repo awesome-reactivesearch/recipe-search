@@ -27,7 +27,7 @@ const RecipeFullView = ({
         footer={
           <span>
             <img
-              src={require("./../assets/images/external-link.png").default}
+              src={'https://i.imgur.com/pX4jJnA.png'}
               height="35px"
             />
             <a
