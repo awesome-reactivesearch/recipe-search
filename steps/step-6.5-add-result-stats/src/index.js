@@ -40,19 +40,23 @@ const App = () => {
               URLParams
               autosuggest
               showDistinctSuggestions
-              size={10}
               enablePopularSuggestions={true}
               popularSuggestionsConfig={{
-                size: 3,
-                minChars: 2,
+                size: 2,
+                minChars: 3,
+                minCount: 3,
                 index: "recipes-demo",
               }}
               enableRecentSuggestions={true}
               recentSuggestionsConfig={{
-                size: 3,
+                size: 2,
                 minHits: 2,
+                minChars: 4,
                 index: "recipes-demo",
               }}
+              enablePredictiveSuggestions={true}
+              maxPredictedWords={2}
+              size={5}
               index="recipes-demo"
             />
             {/* Recipe Suggestions Component */}
@@ -77,6 +81,7 @@ ReactDOM.render(
       url="https://appbase-demo-ansible-abxiydt-arc.searchbase.io"
       appbaseConfig={{
         recordAnalytics: true,
+        userId: "jon@appbase.io",
       }}
     >
       <App />

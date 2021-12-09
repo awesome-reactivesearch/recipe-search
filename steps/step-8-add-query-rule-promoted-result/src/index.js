@@ -40,20 +40,24 @@ const App = () => {
               URLParams
               autosuggest
               showDistinctSuggestions
-              size={10}
               enablePopularSuggestions={true}
               popularSuggestionsConfig={{
-                size: 3,
-                minChars: 2,
+                size: 2,
+                minChars: 3,
+                minCount: 3,
                 index: "recipes-demo",
               }}
               enableRecentSuggestions={true}
               recentSuggestionsConfig={{
-                size: 3,
+                size: 2,
                 minHits: 2,
+                minChars: 4,
                 index: "recipes-demo",
               }}
+              enablePredictiveSuggestions={true}
+              maxPredictedWords={2}
               index="recipes-demo"
+              size={5}
             />
             {/* Recipe Suggestions Component */}
             <QuerySuggestions />
